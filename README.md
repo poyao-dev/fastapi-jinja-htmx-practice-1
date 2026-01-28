@@ -4,6 +4,6 @@ a htmx project practice using fastapi and jinja
 TEST link to jira
 TEST again now
 TEST for PR 6
-TEST for PR 7
+TEST for PR 1
 run command:
 `uv run uvicorn app.main:app --reload`
