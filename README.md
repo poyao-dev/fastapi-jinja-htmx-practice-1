@@ -5,5 +5,6 @@ TEST link to jira
 TEST again now
 TEST for PR 6
 TEST for PR 9
+TEST for PR 10
 run command:
 `uv run uvicorn app.main:app --reload`
