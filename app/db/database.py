@@ -13,7 +13,7 @@ engine = create_async_engine(
 )
 
 
-# Test modification 2
+# Test modification 1
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
