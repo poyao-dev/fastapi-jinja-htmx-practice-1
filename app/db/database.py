@@ -21,7 +21,7 @@ async def init_db():
     async with AsyncSession(engine) as session:
         existing_contact = await session.get(Contact, 1)
         if not existing_contact:
-            contact = Contact(id=1, name="John Doe", email="john@sqlite.org")
+            contact = Contact(id=1, name="Jane Doe", email="Jane@sqlite.org")
             session.add(contact)
             await session.commit()
 
