@@ -1,6 +1,7 @@
 from sqlalchemy.ext.asyncio import create_async_engine
-from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel
+from sqlmodel.ext.asyncio.session import AsyncSession
+
 from app.core.config import settings
 
 # Seed data
@@ -13,7 +14,7 @@ engine = create_async_engine(
 )
 
 
-# Test modification test 35
+# Test modification test 36
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
