@@ -1,6 +1,7 @@
 from sqlalchemy.ext.asyncio import create_async_engine
-from sqlmodel.ext.asyncio.session import AsyncSession
 from sqlmodel import SQLModel
+from sqlmodel.ext.asyncio.session import AsyncSession
+
 from app.core.config import settings
 
 # Seed data
@@ -13,7 +14,7 @@ engine = create_async_engine(
 )
 
 
-# Test modification test 22
+# Test modification test 38
 async def init_db():
     async with engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
@@ -21,7 +22,7 @@ async def init_db():
     async with AsyncSession(engine) as session:
         existing_contact = await session.get(Contact, 1)
         if not existing_contact:
-            contact = Contact(id=1, name="Jane Doe", email="Jane@sqlite.org")
+            contact = Contact(id=1, name="John Doe", email="john@sqlite.org")
             session.add(contact)
             await session.commit()
 
